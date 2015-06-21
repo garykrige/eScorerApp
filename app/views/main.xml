@@ -1,0 +1,15 @@
+<!--
+     Main View
+
+     Copyright - Gary Krige
+-->
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+      loaded="pageLoaded"
+      navigatedTo="pageNavigatedTo">
+  <StackLayout>
+    <Button text="New Match" tap="newMatch"></Button>
+    <Button text="Resume Match" tap="resumeMatch"></Button>
+
+  </StackLayout>
+</Page>
+

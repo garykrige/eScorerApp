@@ -1,0 +1,44 @@
+﻿.tab-view {
+    height: 150px;
+}
+
+.innings-score {
+    horizontal-align: center;
+    margin: 10;
+    font-size: 30;
+    color: #2E4F8A;
+}
+
+.team-name {
+    horizontal-align: right;
+    font-size: 15;
+    color: #2E4F8A;
+}
+
+.batsman-score {
+    horizontal-align: center;
+    margin: 5;
+    font-size: 22;
+    color: #2E4F8A;
+}
+
+.btn-number {
+    vertical-align: center;
+    background-color: #037AC4;
+    color: #8CE8FC;
+    font-size: 40;
+    horizontal-align: center;
+    width: 2000px;
+    height: 500px;
+}
+
+.btn-type {
+    vertical-align: center;
+    background-color: #22AB33;
+    color: #000000;
+    font-size: 40;
+    horizontal-align: center;
+    width: 2000px;
+    height: 500px;
+}
+
