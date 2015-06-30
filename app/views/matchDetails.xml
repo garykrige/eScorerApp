@@ -1,0 +1,10 @@
+<!--
+     MatchDetails View
+
+     Copyright - Gary Krige
+-->
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="navigatedTo">
+  <StackLayout stretchLastChild="true">
+    <TextField text="{{ someProperty }}" />
+  </StackLayout>
+</Page>

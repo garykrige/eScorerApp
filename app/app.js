@@ -1,14 +1,19 @@
 var application = require("application");
-appSettings = require("application-settings");
 var platform = require("platform");
 
-global.URL = "http://192.168.1.4:1337";
+global.URL = "http://localhost:1337";
 
 application.cssFile = "./app.css";
 application.onLaunch = function (context) {
-    global.MATCH_ID = appSettings.getNumber("MatchID", -1);
+    
+    var appSettings = require("application-settings"); //This needs to have a context for android
 
     // Is there an active match?
+    global.MATCH_ID = appSettings.getNumber("MatchID", -1);
+
+    //HACKING!
+    global.MATCH_ID = -1;
+    
     if (global.MATCH_ID !== -1){
         application.mainModule = "./views/scorer";
     } else {

@@ -1,67 +1,72 @@
 <!--
-     Scorer ViewModel
+    Scorer ViewModel
 
-     Copyright - Gary Krige
+Copyright - Gary Krige
 -->
-<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="navigatedTo">
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+      navigatedTo="onNavigatedTo">
   <DockLayout stretchLastChild="true">
-    <!--<StackLayout dock="top" cssClass="tab-view"> -->
-      <TabView dock="top" cssClass="tab-view">
-        <TabView.items>
-          <TabViewItem title="Totals">
-            <TabViewItem.view>
-              <StackLayout>
-                <Label text="{{ matchID + ' : ' + inningsScore }}" cssClass="innings-score"/>
-                <Label text="{{ 'Overs : ' + overs }}" cssClass="innings-score" />
-              </StackLayout>
-            </TabViewItem.view>
-          </TabViewItem>
-          <TabViewItem title="Batsmen">
-            <TabViewItem.view>
-              <StackLayout>
-                <Label text="{{ batsman1 }}" cssClass="innings-score"/>
-                <Label text="{{ batsman2 }}" cssClass="innings-score"/>
-              </StackLayout>
-            </TabViewItem.view>
-          </TabViewItem>
-          <TabViewItem title="Bowlers">
-            <TabViewItem.view>
-              <StackLayout>
-                <Label text="Bowler" cssClass="batsman-score"/>
-              </StackLayout>
-            </TabViewItem.view>
-          </TabViewItem>
-        </TabView.items>
-      </TabView>
-<!--    </StackLayout> -->
+    <TabView dock="top" cssClass="tab-view">
+      <TabView.items>
+        <TabViewItem title="Totals">
+          <TabViewItem.view>
+            <StackLayout>
+              <Label text="{{inningsScore}}"
+                     cssClass="innings-score"/>
+              <Label text="{{overs}}"
+                     cssClass="innings-score" />
+            </StackLayout>
+          </TabViewItem.view>
+        </TabViewItem>
+        <TabViewItem title="Batsmen">
+          <TabViewItem.view>
+            <StackLayout>
+              <Label text="{{batter1}}"
+                     cssClass="innings-score"/>
+              
+              <Label text="{{batter2}}"
+                     cssClass="innings-score"/>
+            </StackLayout>
+          </TabViewItem.view>
+        </TabViewItem>
+        <TabViewItem title="Bowlers">
+          <TabViewItem.view>
+            <StackLayout>
+              <Label text="{{bowler}}"
+                     cssClass="batsman-score"/>
+            </StackLayout>
+          </TabViewItem.view>
+        </TabViewItem>
+      </TabView.items>
+    </TabView>
 
-    <GridLayout rows="*,*,*,*" columns="*,*,*" dock="bottom" swipe="btnChgSwipe">
+    <GridLayout rows="*,*,*,*" columns="*,*,*" dock="bottom">
       <Border row="0" colSpan="3" borderWidth="0.4">
-        <Button text="{{ ballType }}" cssClass="btn-type" tap="btnChgType" />
+        <Button text="Type" cssClass="btn-type" tap="{{ btnChgType }}" />
       </Border>
 
       <Border row="1" col="0" borderWidth="0.4">
-        <Button text="1" cssClass="btn-number" tap="btnTap1" />
+        <Button text="1" cssClass="btn-number" tap="{{ btnTap1 }}" />
       </Border>
       <Border row="1" col="1" borderWidth="0.4">
-        <Button text="2" cssClass="btn-number" tap="btnTap2" />
+        <Button text="2" cssClass="btn-number" tap="{{ btnTap2 }}" />
       </Border>
       <Border row="1" col="2" borderWidth="0.4">
-        <Button text="3" cssClass="btn-number" tap="btnTap3" />
+        <Button text="3" cssClass="btn-number" tap="{{ btnTap3 }}" />
       </Border>
       <Border row="2" col="0" borderWidth="0.4">
-        <Button text="4" cssClass="btn-number" tap="btnTap4" />
+        <Button text="4" cssClass="btn-number" tap="{{ btnTap4 }}" />
       </Border>
       <Border row="2" col="1" borderWidth="0.4">
-        <Button text="5" cssClass="btn-number" tap="btnTap5" />
+        <Button text="5" cssClass="btn-number" tap="{{ btnTap5 }}" />
       </Border>
       <Border row="2" col="2" borderWidth="0.4">
-        <Button text="6" cssClass="btn-number" tap="btnTap6" />
+        <Button text="6" cssClass="btn-number" tap="{{ btnTap6 }}" />
       </Border>
       <Border row="3" colSpan="3" borderWidth="0.4">
-        <Button text="Dot" cssClass="btn-number" tap="btnTap0" />
+        <Button text="Dot" cssClass="btn-number" tap="{{ btnTap0 }}" />
       </Border>
-              
+      
     </GridLayout>
   </DockLayout>
 </Page>
